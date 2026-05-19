@@ -21,15 +21,16 @@ This means **the `.env` file was missing**. I've created it, but you need to add
 5. Click "Generate token"
 6. **COPY THE TOKEN IMMEDIATELY** (you won't see it again!)
 
-## Step 2: Add Token to `.env`
+## Step 2: Create local `.env` (not committed to git)
 
-Open `backend/.env` and replace:
+Create `backend/.env` on your machine only (this file is gitignored and must never be pushed):
 
 ```
 GITHUB_TOKEN=your_github_token_here
+DATABASE_URL=sqlite:///./pr_dashboard.db
 ```
 
-With your actual token:
+Replace `your_github_token_here` with your actual token:
 
 ```
 GITHUB_TOKEN=ghp_1234567890abcdefghijklmnopqrstuvwxyz
